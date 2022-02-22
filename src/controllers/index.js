@@ -1,6 +1,8 @@
-const recipePage = require('./recipe');
+const recipeAPI = require('./recipeAPI');
 const searchRecipe = require('./searchRecipe');
-const handle404=require('./404')
-const  handle500=require('./500')
+const handle404 = require('./404');
+const handle500 = require('./500');
 
-module.exports = { searchRecipe, recipePage,handle404, handle500};
+const handleRecipePage = require('./recipePage');
+
+module.exports = { searchRecipe, recipeAPI , handle404, handle500, handleRecipePage };

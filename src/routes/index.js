@@ -2,11 +2,13 @@ const express = require('express');
 
 const router = express.Router();
 
-const { searchRecipe, recipePage,handle404,handle500} = require('../controllers');
+const { searchRecipe,recipeAPI ,handle404,handle500,handleRecipePage} = require('../controllers');
+
+
+
+router.get('/recipe', recipeAPI);
+
+router.route('/search-?recipe').post(searchRecipe).get(handleRecipePage);
 router.use(handle404)
 router.use(handle500)
-router.get('/recipe', recipePage);
-
-router.get('/searchRecipe', searchRecipe);
-
 module.exports = router;
