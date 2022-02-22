@@ -1,5 +1,6 @@
 {
   "files.eol": "\n",
   "prettier.printWidth": 95,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all"
 }
