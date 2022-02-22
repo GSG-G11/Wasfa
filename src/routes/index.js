@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const { homePage, recipePage } = require('../controllers');
+const { searchRecipe, recipePage } = require('../controllers');
 
-router.get('/', homePage);
+router.get('/recipe', recipePage);
 
-router.get('/searchRecipe', recipePage);
+router.get('/searchRecipe', searchRecipe);
 
 module.exports = router;
