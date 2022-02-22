@@ -13,7 +13,10 @@ const searchRecipe = (req, res) => {
   )
     .then((data) => data.json())
     .then((data) => res.json(data))
-    .catch(() => res.json('<h3>something went wrong</h3>'));
+    .catch(() => {
+      res.status(500);
+      res.json('<h3>something went wrong</h3>');
+    });
 };
 
 module.exports = searchRecipe;
