@@ -1,4 +1,4 @@
-const homePage = require('./homePage');
 const recipePage = require('./recipe');
+const searchRecipe = require('./searchRecipe');
 
-module.exports = { homePage, recipePage };
+module.exports = { searchRecipe, recipePage };
