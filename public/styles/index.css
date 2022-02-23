@@ -87,14 +87,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  border-radius: 8px;
   margin-left: 20px;
 }
 
 #recipeImg {
   width: 20vw;
   height: 30vh;
-
+  border-radius: 8px;
   background-color: #ecf0f1;
   margin-bottom: 1vh;
 }
@@ -126,6 +126,7 @@ body {
   margin-bottom: 15px;
   align-self: end;
   transition: transform 200ms ease;
+  cursor: pointer;
 }
 #viewRecipeBtn:hover {
   transform: translateY(-1px);
