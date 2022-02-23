@@ -2,7 +2,7 @@
 
 ## Links :tv:
 - https://wasfa2022.herokuapp.com
-## Purpose :pencil;
+## Purpose :pencil:
 - Build a website that views food recipes to help people to learn cooking and preparing delicious meals.
 
 ## User Stories :books:
