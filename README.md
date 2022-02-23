@@ -3,11 +3,11 @@
 ## Links
 - https://wasfa2022.herokuapp.com/
 ## Purpose
-- Build a website that views food recipes to help people learn to cook and prepare delicious meals.
+- Build a website that views food recipes to help people to learn cooking and preparing delicious meals.
 
 ## User Stories 
 ### As a user :
-- I want to visit your site and the most popular recipes.
+- I want to visit your site and get the most popular recipes.
 - I want to visit your site and get the ingredient and description about recipe.
 - I want to visit your site and search about any recipes.
 
