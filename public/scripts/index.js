@@ -3,7 +3,7 @@ const form = document.querySelector('form');
 const searchInput = document.querySelector('#search');
 cardSection.textContent = '';
 
-const renderRecipeCard = (ele) => {
+const renderRecipeCard = (el) => {
   const div = document.createElement('div');
   const divImg = document.createElement('div');
   const img = document.createElement('img');
@@ -15,15 +15,15 @@ const renderRecipeCard = (ele) => {
   div.className = 'FoodCard';
 
   img.id = 'recipeImg';
-  img.src = ele.strCategoryThumb;
+  img.src = el.strCategoryThumb;
   divDecription.id = 'desciption';
-  h1.textContent = ele.strCategory;
+  h1.textContent = el.strCategory;
   btn.type = 'submit';
   btn.id = 'viewRecipeBtn';
   btn.innerText = 'View Recipe';
   divBtn.id = 'divBtn';
 
-  p.textContent = `${ele.strCategoryDescription.slice(0, 105)}...know more`;
+  p.textContent = `${el.strCategoryDescription.slice(0, 105)}...know more`;
   cardSection.appendChild(div);
 
   divImg.appendChild(img);
@@ -35,7 +35,7 @@ const renderRecipeCard = (ele) => {
   div.appendChild(divBtn);
 
   btn.addEventListener('click', () => {
-    localStorage.setItem('searchTerm', ele.strCategory);
+    localStorage.setItem('searchTerm', el.strCategory);
     window.location.assign('/searchRecipe');
   });
 };
