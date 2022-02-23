@@ -11,7 +11,7 @@ const searchRecipe = (req, res) => {
   return fetch(`https://api.edamam.com/search?q=${searchTerm}&app_id=${appId}&app_key=${appKey}`)
     .then((data) => data.json())
     .then((data) => res.json(data))
-    .catch((error) => res.status(500).send('<h3>something went wrong</h3>'));
+    .catch(() => res.status(500).send('<h3>something went wrong</h3>'));
 };
 
 module.exports = searchRecipe;

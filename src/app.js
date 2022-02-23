@@ -14,7 +14,7 @@ app.use(cors());
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: '30d' }));
 
 app.use(express.json());
 

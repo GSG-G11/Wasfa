@@ -3,7 +3,7 @@ const form = document.querySelector('form');
 const searchInput = document.querySelector('#search');
 cardSection.textContent = '';
 
-const renderRecipeCard = ele => {
+const renderRecipeCard = (ele) => {
   const div = document.createElement('div');
   const divImg = document.createElement('div');
   const img = document.createElement('img');
