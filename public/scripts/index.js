@@ -21,6 +21,7 @@ const renderRecipeCard = ele => {
   btn.type = 'submit';
   btn.id = 'viewRecipeBtn';
   btn.innerText = 'View Recipe';
+  divBtn.id = 'divBtn';
 
   p.textContent = `${ele.strCategoryDescription.slice(0, 105)}...know more`;
   cardSection.appendChild(div);
