@@ -10,10 +10,6 @@ const ingredientsList = select('.ingredients-list');
 const viewRecipeBtn = select('.viewRecipeBtn');
 const flipCardBtn = select('.flip-card-btn');
 
-const searchTerm = {
-  searchTerm: localStorage.getItem('searchTerm') || 'burger',
-};
-
 viewRecipeBtn.addEventListener('click', () => {
   recipeCard.classList.add('flip-card');
   backCard.classList.add('back-card-visible');
@@ -37,6 +33,10 @@ const renderRecipe = (recipe) => {
 
     return ingredientsList.append(listItem);
   });
+};
+
+const searchTerm = {
+  searchTerm: localStorage.getItem('searchTerm') ?? 'burger',
 };
 
 fetchData('POST', '/searchRecipe', searchTerm).then(({ hits }) => {

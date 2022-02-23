@@ -20,8 +20,6 @@ html {
   font-size: 10px;
 }
 body {
-  /* min-height: 100vh;
-  background-color: #ecf0f1;*/
   font-family: var(--bodyFont);
   color: var(--textColor);
   line-height: 1.5;
@@ -47,6 +45,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#title p {
+  font-size: 4rem;
+  margin-left: 5rem;
+  color: var(--white);
 }
 #search {
   border: 1px solid grey;
