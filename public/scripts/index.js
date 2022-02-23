@@ -1,6 +1,9 @@
 const cardSection = document.querySelector('#FoodCards');
+const form = document.querySelector('form');
+const searchInput = document.querySelector('#search');
 cardSection.textContent = '';
 
+// eslint-disable-next-line no-unused-vars
 const renderRecipeCard = (ele) => {
   const div = document.createElement('div');
   const divImg = document.createElement('div');
@@ -32,16 +35,9 @@ const renderRecipeCard = (ele) => {
   divDecription.appendChild(btn);
 
   btn.addEventListener('click', () => {
-    // eslint-disable-next-line no-undef
-    fetchData('post', '/searchrecipe', { searchTerm: ele.strCategory });
+    localStorage.setItem('searchTerm', ele.strCategory);
+    window.location.assign('/searchRecipe');
   });
 };
 
-const form = document.querySelector('form');
-const searchInput = document.querySelector('#search');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  fetchData('POST', '/searchrecipe', { searchTerm: searchInput.value }).then(console.log);
-});
+form.addEventListener('submit', () => localStorage.setItem('searchTerm', searchInput.value));

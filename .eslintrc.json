@@ -10,5 +10,7 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "rules": {}
+  "rules": {
+    "eslint arrow-parens": ["error", "always"]
+  }
 }
