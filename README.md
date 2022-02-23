@@ -12,7 +12,7 @@
 - I want to visit your site and search about any recipes.
 
 ## User journey 
-- when you open Wasfa  website you'll faced with the most popular recipes and some description about them by by clicking View Recipe you will be directed to another page with the description and the ingredient.
+- when you open Wasfa  website you'll faced with the most popular recipes and some description about them by clicking View Recipe you will be directed to another page with the description and the ingredient.
 - in header of bage you face with the search input so you can easily get the recipe you want.
 
 ## tech-stack
