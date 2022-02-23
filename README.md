@@ -1,11 +1,11 @@
-# Wasfa
+# Wasfa:burger:
 
-## Links
+## Links :tv:
 - https://wasfa2022.herokuapp.com
-## Purpose
+## Purpose :pencil;
 - Build a website that views food recipes to help people to learn cooking and preparing delicious meals.
 
-## User Stories :
+## User Stories :books:
 ### As a user :
 - I want to visit your site and get the most popular recipes.
 - I want to visit your site and get the ingredient and description about recipe.
@@ -26,6 +26,6 @@
 https://www.themealdb.com
 https://api.edamam.com
 
-## Team Members 
+## Team Members :busts_in_silhouette
 - Amjad Hassan
 - Farah Shaqoura
