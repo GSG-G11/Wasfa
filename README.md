@@ -1,4 +1,4 @@
-# Wasfa:food:
+# Wasfa
 
 ## Links :tv:
 - https://wasfa2022.herokuapp.com
