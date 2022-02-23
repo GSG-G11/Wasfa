@@ -1,12 +1,3 @@
-
-const select = tag => document.querySelector(tag);
-const createEl = (tag, className, text) => {
-  const el = document.createElement(tag);
-  if (className) el.className = className;
-  if (text) el.textContent = text;
-  return el;
-};
-
 const recipeCard = select('.ft-recipe');
 const recipeTitle = select('.recipe-title');
 const recipeImage = select('.ft-recipe__thumb img');
@@ -20,10 +11,8 @@ const viewRecipeBtn = select('.viewRecipeBtn');
 const flipCardBtn = select('.flip-card-btn');
 
 const searchTerm = {
-
   searchTerm: localStorage.getItem('searchTerm') || 'burger',
 };
-
 
 viewRecipeBtn.addEventListener('click', () => {
   recipeCard.classList.add('flip-card');
@@ -43,7 +32,7 @@ const renderRecipe = (recipe) => {
   recipeServe.textContent = recipe.yield;
   recipeDesc.textContent = `There’s no better way to celebrate May being National ${recipe.label} Month than by sharing a sweet treat with your pup!!! ${recipe.label}...`;
 
-  recipe.ingredientLines.slice(0, 10).map(ing => {
+  recipe.ingredientLines.slice(0, 10).map((ing) => {
     const listItem = createEl('li', 'item', ing);
 
     return ingredientsList.append(listItem);
