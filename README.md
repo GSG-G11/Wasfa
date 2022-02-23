@@ -23,8 +23,8 @@
 - express 
 
 ## API
-https://www.themealdb.com
-https://api.edamam.com
+- https://www.themealdb.com
+- https://api.edamam.com
 
 ## Team Members 
 - Amjad Hassan
