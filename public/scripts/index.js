@@ -3,8 +3,8 @@ const form = document.querySelector('form');
 const searchInput = document.querySelector('#search');
 cardSection.textContent = '';
 
-// eslint-disable-next-line no-unused-vars
-const renderRecipeCard = (ele) => {
+
+const renderRecipeCard = ele => {
   const div = document.createElement('div');
   const divImg = document.createElement('div');
   const img = document.createElement('img');
@@ -40,4 +40,6 @@ const renderRecipeCard = (ele) => {
   });
 };
 
+
 form.addEventListener('submit', () => localStorage.setItem('searchTerm', searchInput.value));
+
