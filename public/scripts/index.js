@@ -3,7 +3,6 @@ const form = document.querySelector('form');
 const searchInput = document.querySelector('#search');
 cardSection.textContent = '';
 
-
 const renderRecipeCard = ele => {
   const div = document.createElement('div');
   const divImg = document.createElement('div');
@@ -11,6 +10,7 @@ const renderRecipeCard = ele => {
   const divDecription = document.createElement('div');
   const h1 = document.createElement('h1');
   const p = document.createElement('p');
+  const divBtn = document.createElement('div');
   const btn = document.createElement('button');
   div.className = 'FoodCard';
 
@@ -24,15 +24,14 @@ const renderRecipeCard = ele => {
 
   p.textContent = `${ele.strCategoryDescription.slice(0, 105)}...know more`;
   cardSection.appendChild(div);
-  div.appendChild(divImg);
-  div.appendChild(divImg);
-
-  div.appendChild(divDecription);
 
   divImg.appendChild(img);
+  divBtn.appendChild(btn);
   divDecription.appendChild(h1);
   divDecription.appendChild(p);
-  divDecription.appendChild(btn);
+  div.appendChild(divImg);
+  div.appendChild(divDecription);
+  div.appendChild(divBtn);
 
   btn.addEventListener('click', () => {
     localStorage.setItem('searchTerm', ele.strCategory);
@@ -40,6 +39,4 @@ const renderRecipeCard = ele => {
   });
 };
 
-
 form.addEventListener('submit', () => localStorage.setItem('searchTerm', searchInput.value));
-

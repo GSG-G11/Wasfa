@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-  --main-color: green;
+  --headlinesFont: 'Jost', sans-serif;
+  --bodyFont: 'Work Sans', sans-serif;
+  --wildWatermelon: #ff4f87;
+  --fuelYellow: #f0a035;
+  --textColor: #323232;
+  --white: #fff;
+  --black: #000;
 }
 * {
   margin: 0;
@@ -14,8 +20,19 @@ html {
   font-size: 10px;
 }
 body {
+  /* min-height: 100vh;
+  background-color: #ecf0f1;*/
+  font-family: var(--bodyFont);
+  color: var(--textColor);
+  line-height: 1.5;
+  background-image: linear-gradient(rgba(29, 21, 21, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../image/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
-  background-color: #ecf0f1;
+  background-position: 10% 10%;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -42,8 +59,9 @@ body {
   height: 5vh;
   width: 2vw;
 
-  background: red;
-  color: white;
+  background-color: #ff4f87;
+  color: #fff;
+
   font-size: 17px;
   border: 1px solid grey;
 
@@ -54,33 +72,41 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .FoodCard {
+  border-radius: 5px;
   width: 20vw;
   height: 58vh;
   background-color: #fff;
   margin-bottom: 7vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  box-shadow: 1px 1px 9px 0#F0F3F4;
+  justify-content: space-between;
+
+  margin-left: 20px;
 }
 
 #recipeImg {
   width: 20vw;
   height: 30vh;
+
+  background-color: #ecf0f1;
   margin-bottom: 1vh;
 }
 #desciption {
   margin: 0 1vw;
   margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+#divBtn {
+  margin-left: 2vw;
 }
 #desciption h1 {
   font-size: 2rem;
   padding: 5px;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid #d8d8d8;
 }
 #desciption p {
   font-size: 1.2rem;
@@ -89,13 +115,105 @@ body {
 #viewRecipeBtn {
   width: 15vw;
   color: #fff;
-  background-color: red;
+  background-color: #ff4f87;
   border: none;
   height: 4vh;
   border-radius: 3px;
+  margin-bottom: 15px;
+  align-self: end;
+  transition: transform 200ms ease;
+}
+#viewRecipeBtn:hover {
+  transform: translateY(-1px);
 }
 
-@media (max-width: 567px) {
+@media (min-width: 900px) and (max-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+  #FoodCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .FoodCard {
+    width: 25vw;
+    height: 58vh;
+  }
+  #recipeImg {
+    width: 25vw;
+    margin-bottom: 1vh;
+  }
+  #viewRecipeBtn {
+    width: 20vw;
+  }
+  #btn {
+    width: 4vw;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    width: 950px;
+  }
+
+  #FoodCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .FoodCard {
+    width: 25vw;
+    height: 60vh;
+  }
+  #recipeImg {
+    width: 25vw;
+    margin-bottom: 1vh;
+  }
+  #viewRecipeBtn {
+    width: 20vw;
+  }
+  #divBtn {
+    margin-left: 2vw;
+  }
+  #btn {
+    width: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  #FoodCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .FoodCard {
+    width: 35vw;
+    height: 60vh;
+  }
+  #recipeImg {
+    width: 35vw;
+    margin-bottom: 1vh;
+  }
+
+  #viewRecipeBtn {
+    width: 30vw;
+  }
+  #btn {
+    width: 4vw;
+  }
+  #search {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 500px) {
   .container {
     width: 550px;
   }
@@ -111,42 +229,27 @@ body {
   #search {
     width: 60vw;
   }
-  #FoodCard {
-    width: 70vw;
-    height: 62vh;
-  }
   #FoodCards {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    align-content: center;
   }
 
+  .FoodCard {
+    width: 70vw;
+    height: 58vh;
+    margin-left: 0;
+  }
   #recipeImg {
-    margin-top: 0;
     width: 70vw;
     height: 30vh;
     margin-bottom: 1vh;
   }
   #viewRecipeBtn {
-    width: 45vw;
+    width: 60vw;
   }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 950px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1150px;
+  #divBtn {
+    margin-left: 3vw;
   }
 }
