@@ -8,7 +8,6 @@ const createEl = (tag, className, text) => {
 };
 
 const recipeCard = select('.ft-recipe');
-
 const recipeTitle = select('.recipe-title');
 const recipeImage = select('.ft-recipe__thumb img');
 const recipeTimeNumber = select('.time .value');
@@ -37,7 +36,7 @@ flopCardBtn.addEventListener('click', () => {
 });
 
 // eslint-disable-next-line no-undef
-fetchData('POST', 'http://localhost:3000/searchrecipe', searchTerm).then(({ hits }) => {
+fetchData('POST', '/searchrecipe', searchTerm).then(({ hits }) => {
   const { recipe } = hits[1];
 
   recipeTitle.textContent = recipe.label;
@@ -47,6 +46,7 @@ fetchData('POST', 'http://localhost:3000/searchrecipe', searchTerm).then(({ hits
   recipeServe.textContent = recipe.yield;
   recipeDesc.textContent =
     'There’s no better way to celebrate May being National Strawberry Month than by sharing a sweet treat with your pup!!! Strawberries...';
+
   recipe.ingredientLines.slice(0, 10).map((ing) => {
     const listItem = createEl('li', 'item', ing);
     return ingredientsList.append(listItem);
