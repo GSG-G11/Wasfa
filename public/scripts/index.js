@@ -1,7 +1,7 @@
 const cardSection = document.querySelector('#FoodCards');
 cardSection.textContent = '';
 
-const renderRecipeCard = (ele) => {
+const renderRecipeCard = ele => {
   const div = document.createElement('div');
   const divImg = document.createElement('div');
   const img = document.createElement('img');
@@ -40,8 +40,10 @@ const renderRecipeCard = (ele) => {
 const form = document.querySelector('form');
 const searchInput = document.querySelector('#search');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', e => {
   e.preventDefault();
-
-  fetchData('POST', '/searchrecipe', { searchTerm: searchInput.value }).then(console.log);
+  localStorage.setItem('searchTerm', searchInput.value);
+  // fetchData('POST', '/searchrecipe', { searchTerm: searchInput.value }).then(data =>
+  // localStorage.setItem('searchTerm', data.q),
+  //);
 });

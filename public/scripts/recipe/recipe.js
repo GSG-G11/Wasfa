@@ -1,5 +1,5 @@
 /* eslint-disable operator-linebreak */
-const select = (tag) => document.querySelector(tag);
+const select = tag => document.querySelector(tag);
 const createEl = (tag, className, text) => {
   const el = document.createElement(tag);
   if (className) el.className = className;
@@ -19,9 +19,10 @@ const backCard = select('.back-card');
 const ingredientsList = select('.ingredients-list');
 
 const searchTerm = {
-  searchTerm: 'burger',
+  searchTerm: JSON.parse(localStorage.getItem('searchTerm')) || { searchTerm: 'burger' },
 };
 
+console.log(searchTerm[searchTerm])
 const viewRecipeBtn = select('.viewRecipeBtn');
 const flopCardBtn = select('.flip-card-btn');
 
@@ -47,7 +48,7 @@ fetchData('POST', '/searchrecipe', searchTerm).then(({ hits }) => {
   recipeDesc.textContent =
     'There’s no better way to celebrate May being National Strawberry Month than by sharing a sweet treat with your pup!!! Strawberries...';
 
-  recipe.ingredientLines.slice(0, 10).map((ing) => {
+  recipe.ingredientLines.slice(0, 10).map(ing => {
     const listItem = createEl('li', 'item', ing);
     return ingredientsList.append(listItem);
   });
