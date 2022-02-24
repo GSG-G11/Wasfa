@@ -36,7 +36,7 @@ const renderRecipe = (recipe) => {
 };
 
 const searchTerm = {
-  searchTerm: localStorage.getItem('searchTerm') ?? 'burger',
+  searchTerm: localStorage.getItem('searchTerm') || 'burger',
 };
 
 fetchData('POST', '/searchRecipe', searchTerm).then(({ hits }) => {
