@@ -48,7 +48,8 @@ body {
 }
 
 #title p {
-  font-size: 4rem;
+  font-weight: 500;
+  font-size: 3rem;
   margin-left: 5rem;
   color: var(--white);
 }
