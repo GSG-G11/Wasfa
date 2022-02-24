@@ -23,7 +23,7 @@ flipCardBtn.addEventListener('click', () => {
 const renderRecipe = (recipe) => {
   recipeTitle.textContent = recipe.label;
   recipeImage.src = recipe.image;
-  recipeTimeNumber.textContent = recipe.totalTime;
+  recipeTimeNumber.textContent = recipe.totalTime + 10;
   recipeIngredientsNumber.textContent = recipe.ingredients.length;
   recipeServe.textContent = recipe.yield;
   recipeDesc.textContent = `There’s no better way to celebrate May being National ${recipe.label} Month than by sharing a sweet treat with your pup!!! ${recipe.label}...`;
@@ -40,6 +40,6 @@ const searchTerm = {
 };
 
 fetchData('POST', '/searchRecipe', searchTerm).then(({ hits }) => {
-  const { recipe } = hits[1];
+  const { recipe } = hits[4];
   renderRecipe(recipe);
 });
